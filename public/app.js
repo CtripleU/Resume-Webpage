@@ -1,6 +1,6 @@
 console.log("My name is Cumi Oyemike");
 const contactForm = document.querySelector('.contact-form');
-let name = document.getElementById('sendername');
+let sendername = document.getElementById('sendername');
 let email = document.getElementById('email');
 let subject = document.getElementById('subject');
 let message = document.getElementById('message');
@@ -9,7 +9,7 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let formData = {
-        name: name.value,
+        sendername: sendername.value,
         email: email.value,
         subject: subject.value,
         message: message.value
@@ -21,8 +21,8 @@ contactForm.addEventListener('submit', (e) => {
     xhr.onload =  function(){
         console.log(xhr.responseText);
         if(xhr.responseText == 'success'){
-            alert('Email sent');
-            name.value = '';
+            alert('Thank you for reaching out! Your email has been sent. I will contact you as soon as possible.');
+            sendername.value = '';
             email.value = '';
             subject.value = '';
             message.value = ''
