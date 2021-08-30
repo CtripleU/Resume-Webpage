@@ -17,7 +17,7 @@ app.post('/', (req, res) => {
         service: 'gmail',
         auth: {
             user: 'contactcumioyemike@gmail.com',
-            pass: 'poiuqwerty'
+            pass: ''
         }
     })
     
